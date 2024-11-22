@@ -22,6 +22,9 @@ const createTask = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, createdTask, "Task created successfully"));
 });
 
+
+
+
 const getAllTasks = asyncHandler(async (req, res) => {
   const allTodos = await todos.find({});
 
@@ -31,8 +34,12 @@ const getAllTasks = asyncHandler(async (req, res) => {
 
   return res
     .status(201)
-    .json(new ApiResponse(200, allTodos, "Task created successfully"));
+    .json(new ApiResponse(200, allTodos, "Tasks fetched successfully"));
 });
+
+
+
+
 
 const updateTask = asyncHandler(async (req, res) => {
   const id = req.params.id;
