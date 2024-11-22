@@ -4,13 +4,18 @@ const app = express();
 
 import userRouter from "./Routes/TaskRouter.js";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
 import cors from "cors";
 app.use(bodyParser.json());
+dotenv.config({
+  path: "./.env",
+});
+
 app.use(
   cors({
     origin: process.env.CORS_ORIGIN, // Allow requests from your frontend
     // methods: "GET,POST,PUT,DELETE", // Allowed HTTP methods
-    credentials: true, // If you use cookies, add this
+    // credentials: true, // If you use cookies, add this
   })
 );
 

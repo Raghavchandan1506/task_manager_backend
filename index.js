@@ -4,9 +4,6 @@ import { app } from "./app.js";
 import bodyParser from "body-parser";
 import cors from 'cors'
 
-dotenv.config({
-  path: "./.env",
-});
 
 
 connectDB()
